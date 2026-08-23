@@ -96,9 +96,9 @@ flowchart LR
 - **Shared Data Manifest**는 여러 document의 root와 loading scope를 정의합니다.
 - **Runtime builders**는 DTO를 engine model로 변환하며 version, identity와 reference를 검증합니다.
 - **Typed databases**는 world transition, actor lifecycle과 physics initialization에 read-only lookup을 제공합니다.
-- [[../Game World/01. World Entry and Transition|World Entry and Transition]]은 이 데이터가 실제 world 구성에 사용되는 다음 단계를 설명합니다.
+- [[Projects/Jam/Game World/01. World Entry and Transition|World Entry and Transition]]은 이 데이터가 실제 world 구성에 사용되는 다음 단계를 설명합니다.
 
 ## Document Map
 
-1. [[01. Shared Game Data|Shared Game Data]] — world, actor와 physics 데이터를 하나의 manifest와 identity chain으로 연결하는 방법
-2. [[02. Schema and Code generation|Schema and Code Generation]] — JSON Schema에서 C++/C# DTO와 loader contract를 생성하는 과정
+1.  [[Projects/Jam/Data Pipeline/01. Shared Game Data|Shared Game Data]] — world, actor와 physics 데이터를 하나의 manifest와 identity chain으로 연결하는 방법
+2.  [[Projects/Jam/Data Pipeline/02. Schema and Code generation|Schema and Code Generation]] — JSON Schema에서 C++/C# DTO와 loader contract를 생성하는 과정

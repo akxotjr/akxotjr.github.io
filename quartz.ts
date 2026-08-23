@@ -8,10 +8,11 @@ componentRegistry.setOptionOverrides("explorer", {
       "Execution Model": 1,
       "Networking": 2,
       "Game World": 3,
-      "Physics": 4,
-      "Client Integration": 5,
-      "Data Pipeline": 6,
-      "Observability": 7,
+      "State Synchronization": 4,
+      "Physics": 5,
+      "Client Integration": 6,
+      "Data Pipeline": 7,
+      "Observability": 8,
     }
 
     if (a.isFolder && b.isFolder) {

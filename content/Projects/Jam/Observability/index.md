@@ -68,6 +68,6 @@ Executor metrics도 network, world, process metrics와 같이 metrics window 단
 
 ## Document Map
 
-- [[01. Runtime Metrics|Runtime Metrics]] — 계측 지점, metrics snapshot 범위, metrics window 집계와 출력 구조
-- [[02. Performance Validation|Performance Validation]] — 부하 실험을 구간화하고 여러 신호를 함께 해석하는 검증 방법
-- [[03. Metric Catalog|Metric Catalog]] — scope별 metric key, 집계 방식, 해석 기준
+1. [[Projects/Jam/Observability/01. Runtime Metrics|Runtime Metrics]] — 계측 지점, metrics snapshot 범위, metrics window 집계와 출력 구조
+2. [[Projects/Jam/Observability/02. Performance Validation|Performance Validation]] — 부하 실험을 구간화하고 여러 신호를 함께 해석하는 검증 방법
+3. [[Projects/Jam/Observability/03. Metric Catalog|Metric Catalog]] — scope별 metric key, 집계 방식, 해석 기준

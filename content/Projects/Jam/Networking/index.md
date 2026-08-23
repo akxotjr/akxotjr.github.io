@@ -48,10 +48,10 @@ TCP는 reliable ordered byte stream이며 bootstrap과 제어 흐름의 기준�
 
 Framing, header validation, sequence 처리, transport ACK, fragmentation/reassembly, ordering은 공통 pipeline에서 처리합니다. Packet layer는 application message의 의미를 모르며, 완성되고 검증된 logical packet만 system, RPC, custom handler로 전달합니다.
 
-## Documents
+## Document Map
 
-1. [[01. Connection and Session Lifecycle|Connection and Session Lifecycle]] — transport endpoint가 인증되고 shard-owned logical session이 되어 종료되기까지
-2. [[02. Transport and Delivery Semantics|Transport and Delivery Semantics]] — message 의미에서 필요한 recency·reliability·ordering contract를 선택하는 기준
-3. [[03. Packet Processing Pipeline|Packet Processing Pipeline]] — application payload와 wire 사이의 송수신 stage 및 execution boundary
-4. [[04. Reliable Datagram Delivery|Reliable Datagram Delivery]] — 선택된 reliable contract를 UDP 위에서 ACK, retransmission과 congestion control로 구현하는 방법
-5. [[05. Packet Framing and Fragmentation|Packet Framing and Fragmentation]] — packet boundary, 가변 header, TCP assembly, UDP MTU와 reassembly
+1. [[Projects/Jam/Networking/01. Connection and Session Lifecycle|Connection and Session Lifecycle]] — transport endpoint가 인증되고 shard-owned logical session이 되어 종료되기까지
+2. [[Projects/Jam/Networking/02. Transport and Delivery Semantics|Transport and Delivery Semantics]] — message 의미에서 필요한 recency·reliability·ordering contract를 선택하는 기준
+3. [[Projects/Jam/Networking/03. Packet Processing Pipeline|Packet Processing Pipeline]] — application payload와 wire 사이의 송수신 stage 및 execution boundary
+4. [[Projects/Jam/Networking/04. Reliable Datagram Delivery|Reliable Datagram Delivery]] — 선택된 reliable contract를 UDP 위에서 ACK, retransmission과 congestion control로 구현하는 방법
+5. [[Projects/Jam/Networking/05. Packet Framing and Fragmentation|Packet Framing and Fragmentation]] — packet boundary, 가변 header, TCP assembly, UDP MTU와 reassembly

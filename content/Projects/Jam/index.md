@@ -103,18 +103,18 @@ C++ 클라이언트 런타임과 Unity 사이의 경계입니다. C ABI를 통�
 
 Jam의 전체 구조를 처음 읽는 경우 다음 순서를 권장합니다. 앞쪽 문서에서 정의한 ownership과 data flow가 뒤쪽 시스템의 전제가 됩니다.
 
-1. [[Execution Model/index|Execution Model]] — 상태 소유권, 실행 위치와 cross-thread dispatch
-2. [[Networking/index|Networking]] — transport, session과 delivery contract
-3. [[Data Pipeline/index|Data Pipeline]] — server와 client가 공유하는 content contract
-4. [[Game World/index|Game World]] — world entry, actor lifecycle과 authoritative simulation
-5. [[State Synchronization/index|State Synchronization]] — lifecycle, snapshot, baseline과 prediction
-6. [[Physics/index|Physics]] — physics object model과 simulation scheduling
-7. [[Client Intergration/index|Client Integration]] — native client state와 Unity presentation boundary
-8. [[Observability/index|Observability]] — runtime metrics와 performance validation
+1. [[Projects/Jam/Execution Model/index|Execution Model]] — 상태 소유권, 실행 위치와 cross-thread dispatch
+2. [[Projects/Jam/Networking/index|Networking]] — transport, session과 delivery contract
+3. [[Projects/Jam/Game World/index|Game World]] — world entry, actor lifecycle과 authoritative simulation
+4. [[Projects/Jam/State Synchronization/index|State Synchronization]] — lifecycle, snapshot, baseline과 prediction
+5. [[Projects/Jam/Physics/index|Physics]] — physics object model과 simulation scheduling
+6. [[Projects/Jam/Client Intergration/index|Client Integration]] — native client state와 Unity presentation boundary
+7. [[Projects/Jam/Data Pipeline/index|Data Pipeline]] — server와 client가 공유하는 content contract
+8. [[Projects/Jam/Observability/index|Observability]] — runtime metrics와 performance validation
 
 ## Validation Project
 
-Jam의 기능은 별도의 예제에 머물지 않고 [[../M1/index|M1]]에서 실제 MMORPG 형태의 사용자 흐름과 부하 시나리오로 검증합니다. 월드 진입, 이동, AOI replication, 포탈 전환과 채팅을 조합해 기능 정확성과 처리 한계를 함께 확인하는 것이 목적입니다.
+Jam의 기능은 별도의 예제에 머물지 않고 [[Projects/M1/index|M1]]에서 실제 MMORPG 형태의 사용자 흐름과 부하 시나리오로 검증합니다. 월드 진입, 이동, AOI replication, 포탈 전환과 채팅을 조합해 기능 정확성과 처리 한계를 함께 확인하는 것이 목적입니다.
 
 ## Implementation and Validation Status
 
@@ -130,7 +130,7 @@ Jam의 기능은 별도의 예제에 머물지 않고 [[../M1/index|M1]]에서 �
 | Physics               | Implemented    | Validated  | PhysX runtime, filtering과 async scheduling 주요 경로 검증; 성능 개선 진행                    |
 | Client Integration    | Implemented    | Validated  | native runtime, C ABI와 Unity presentation 통합 경로 검증                               |
 | Observability         | Implemented    | Validated  | metrics aggregation과 catalog 검증; 부하·장애 coverage 확장 중                             |
-|                       |                |            |                                                                                  |
+
 
 ## Current Status
 

@@ -38,17 +38,17 @@ PhysX
 
 ## Document Map
 
-1. [[01. Physics Runtime Model|Physics Runtime Model]] — physics archetype이 JamPx actor와 PhysX object로 구체화되는 과정, character/rigid representation과 scene lifetime
-2. [[02. Collision and Query Filtering|Collision and Query Filtering]] — simulation pair, trigger/contact notification과 raycast/sweep/overlap query를 분리하는 filter policy
-3. [[03. PhysX Integration and Scheduling|PhysX Integration and Scheduling]] — JamNet world ownership, worker offload, fiber completion과 safe-point readback
+1. [[Projects/Jam/Physics/01. Physics Runtime Model|Physics Runtime Model]] — physics archetype이 JamPx actor와 PhysX object로 구체화되는 과정, character/rigid representation과 scene lifetime
+2. [[Projects/Jam/Physics/02. Collision and Query Filtering|Collision and Query Filtering]] — simulation pair, trigger/contact notification과 raycast/sweep/overlap query를 분리하는 filter policy
+3. [[Projects/Jam/Physics/03. PhysX Integration and Scheduling|PhysX Integration and Scheduling]] — JamNet world ownership, worker offload, fiber completion과 safe-point readback
 
 세 문서는 서로 다른 경계를 설명합니다. **Runtime Model**은 “무엇을 physics actor로 표현하는가”, **Filtering**은 “무엇과 상호작용하고 query에서 어떻게 보이는가”, **Integration and Scheduling**은 “그 simulation을 JamNet runtime에서 언제·어디서 실행하는가”를 다룹니다.
 
 ## Implementation References
 
-- `JamPx/include/jampx/PhysicsDatabase.h`
-- `JamPx/include/jampx/PhysicsWorld.h`
-- `JamPx/include/jampx/PhysicsFilter.h`
-- `JamPx/include/jampx/PhysicsSimFilter.h`
-- `JamPx/include/jampx/PhysicsQueryFilter.h`
-- `JamPx/include/jampx/actor/ActorFactory.h`
+- [Physics archetype database와 actor 생성 진입점](https://github.com/akxotjr/Jam/blob/master/JamPx/include/jampx/PhysicsDatabase.h)
+- [PhysX scene ownership과 simulation API](https://github.com/akxotjr/Jam/blob/master/JamPx/include/jampx/PhysicsWorld.h)
+- [공통 collision filter data](https://github.com/akxotjr/Jam/blob/master/JamPx/include/jampx/PhysicsFilter.h)
+- [Simulation pair filtering policy](https://github.com/akxotjr/Jam/blob/master/JamPx/include/jampx/PhysicsSimFilter.h)
+- [Raycast, sweep, overlap query policy](https://github.com/akxotjr/Jam/blob/master/JamPx/include/jampx/PhysicsQueryFilter.h)
+- [Physics actor materialization](https://github.com/akxotjr/Jam/blob/master/JamPx/include/jampx/actor/ActorFactory.h)

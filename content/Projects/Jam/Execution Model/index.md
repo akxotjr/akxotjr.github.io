@@ -75,12 +75,12 @@ mutable state
 
 ## Document Map
 
-1. [[01. State Ownership & Task Routing|State Ownership & Task Routing]] — 상태에서 출발해 owner, 실행 위치, route가 필요한 이유
-2. [[02. Global Concurrent Execution|Global Concurrent Execution]] — owner가 없는 작업을 병렬로 처리하는 영역
-3. [[03. Owner-Local Serial Execution|Owner-Local Serial Execution]] — owner가 있는 상태를 변경하는 실행 영역
-4. [[04. Cross-Thread Task Dispatch|Cross-Thread Task Dispatch]] — global 또는 다른 shard에서 owner-local 경계로 작업을 전달하는 방법
-5. [[05. Fiber-Based Async Scheduling|Fiber-Based Async Scheduling]] — 기존 실행 domain 안에서 비동기 continuation을 유지하는 방법
-6. [[06. Thread and Core Topology|Thread and Core Topology]] — 논리적 실행 역할을 CPU와 NUMA topology에 배치하는 방법
+1. [[Projects/Jam/Execution Model/01. State Ownership & Task Routing|State Ownership & Task Routing]] — 상태에서 출발해 owner, 실행 위치, route가 필요한 이유
+2. [[Projects/Jam/Execution Model/02. Global Concurrent Execution|Global Concurrent Execution]] — owner가 없는 작업을 병렬로 처리하는 영역
+3. [[Projects/Jam/Execution Model/03. Owner-Local Serial Execution|Owner-Local Serial Execution]] — owner가 있는 상태를 변경하는 실행 영역
+4. [[Projects/Jam/Execution Model/04. Cross-Thread Task Dispatch|Cross-Thread Task Dispatch]] — global 또는 다른 shard에서 owner-local 경계로 작업을 전달하는 방법
+5. [[Projects/Jam/Execution Model/05. Fiber-Based Async Scheduling|Fiber-Based Async Scheduling]] — 기존 실행 domain 안에서 비동기 continuation을 유지하는 방법
+6. [[Projects/Jam/Execution Model/06. Thread and Core Topology|Thread and Core Topology]] — 논리적 실행 역할을 CPU와 NUMA topology에 배치하는 방법
 
 
 ## Implementation References

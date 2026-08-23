@@ -67,14 +67,14 @@ flowchart TD
 
 ## Document Map
 
-1. [[01. Replication Model|Replication Model]] — AOI/world state에서 client sync 후보를 만드는 전체 구조
-2. [[02. Lifecycle and Snapshot Delivery|Lifecycle and Snapshot Delivery]] — actor lifetime/meta와 continuous state 전송을 분리하는 이유
-3. [[03. Baseline and Delta State|Baseline and Delta State]] — per-user baseline, baseline ACK, resync, initial sync
-4. [[04. Prediction, Reconciliation and Replay|Prediction, Reconciliation and Replay]] — input history와 authoritative correction을 연결하는 과정
+1. [[Projects/Jam/State Synchronization/01. Replication Model|Replication Model]] — AOI/world state에서 client sync 후보를 만드는 전체 구조
+2. [[Projects/Jam/State Synchronization/02. Lifecycle and Snapshot Delivery|Lifecycle and Snapshot Delivery]] — actor lifetime/meta와 continuous state 전송을 분리하는 이유
+3. [[Projects/Jam/State Synchronization/03. Baseline and Delta State|Baseline and Delta State]] — per-user baseline, baseline ACK, resync, initial sync
+4. [[Projects/Jam/State Synchronization/04. Prediction, Reconciliation and Replay|Prediction, Reconciliation and Replay]] — input history와 authoritative correction을 연결하는 과정
 
 ## Implementation References
 
-- `JamNet/include/jamnet/runtime/world/simulation/server/ServerReplicationSystem.h`
-- `JamNet/src/runtime/world/simulation/server/ServerReplicationSystem.cpp`
-- `JamNet/src/runtime/world/simulation/client/ClientWorld.cpp`
-- `JamNet/include/jamnet/runtime/world/simulation/client/ClientReplaySystem.h`
+- [Server replication 상태와 전송 계약](https://github.com/akxotjr/Jam/blob/master/JamNet/include/jamnet/runtime/world/simulation/server/ServerReplicationSystem.h)
+- [Replication streaming 전체 구현](https://github.com/akxotjr/Jam/blob/master/JamNet/src/runtime/world/simulation/server/ServerReplicationSystem.cpp)
+- [Client authoritative state 소비](https://github.com/akxotjr/Jam/blob/master/JamNet/src/runtime/world/simulation/client/ClientWorld.cpp)
+- [Prediction history와 replay 계약](https://github.com/akxotjr/Jam/blob/master/JamNet/include/jamnet/runtime/world/simulation/client/ClientReplaySystem.h)

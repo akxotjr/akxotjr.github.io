@@ -62,5 +62,5 @@ Data Pipeline에서 생성한 ID와 DTO는 이 경계를 지나온 런타임 데
 
 ## Document Map
 
-- [[01. Client State and Event Flow|Client State and Event Flow]] — 백그라운드 결과가 프런트엔드 상태, 이벤트, Presentation Frame으로 공개되는 과정
-- [[02. Native Unity Bridge|Native Unity Bridge]] — Native Runtime과 Unity 사이의 ABI, 메모리 소유권, 요청·응답 계약
+1. [[Projects/Jam/Client Intergration/01. Client State and Event Flow|Client State and Event Flow]] — 백그라운드 결과가 프런트엔드 상태, 이벤트, Presentation Frame으로 공개되는 과정
+2. [[Projects/Jam/Client Intergration/02. Native Unity Bridge|Native Unity Bridge]] — Native Runtime과 Unity 사이의 ABI, 메모리 소유권, 요청·응답 계약

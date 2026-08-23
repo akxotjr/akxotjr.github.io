@@ -35,9 +35,9 @@ M1_Server ───── JamNet server runtime ───── JamUnity Assets/
 
 ## Documents
 
-- [[01. Server Content and World Lifecycle|Server Content and World Lifecycle]] — authentication, character session, world materialization, portal과 social route
-- [[02. Unity Client Flow|Unity Client Flow]] — login부터 character select, world presentation, input·chat UI까지의 흐름
-- [[03. Bot Scenarios and Validation|Bot Scenarios and Validation]] — headless scenario, profile, 실행 phase와 관측 결과
+- [[Projects/M1/01. Server Content and World Lifecycle|Server Content and World Lifecycle]] — authentication, character session, world materialization, portal과 social route
+- [[Projects/M1/02. Unity Client Flow|Unity Client Flow]] — login부터 character select, world presentation, input·chat UI까지의 흐름
+- [[Projects/M1/03. Bot Scenarios and Validation|Bot Scenarios and Validation]] — headless scenario, profile, 실행 phase와 관측 결과
 
 ## Current Boundaries
 
@@ -49,12 +49,12 @@ M1의 account와 character store는 process memory에 있다. 서버 시작 시 
 
 ### Implementation References
 
-- [M1 server bootstrap](../../SampleApp/M1_Server/main.cpp)
-- [Shared world contents](../../SampleApp/M1_Shared/Data/World/world_contents.json)
-- [Bot runner](../../SampleApp/M1_Bot/BotRunner.cpp)
-- [Unity client root](../../JamUnity/Assets/M1/Runtime/Client/ClientRoot.cs)
+- [M1 server bootstrap](https://github.com/akxotjr/Jam/blob/master/SampleApp/M1_Server/main.cpp)
+- [Shared world contents](https://github.com/akxotjr/Jam/blob/master/SampleApp/M1_Shared/Data/World/world_contents.json)
+- [Bot runner](https://github.com/akxotjr/Jam/blob/master/SampleApp/M1_Bot/BotRunner.cpp)
+- [Unity client root](https://github.com/akxotjr/JamUnityClient/blob/master/Assets/M1/Runtime/Client/ClientRoot.cs)
 
 ### Related
 
-- [[../Jam/Networking/index|Networking]]
-- [[../Jam/Observability/index|Observability]]
+- [[Projects/Jam/Networking/index|Networking]]
+- [[Projects/Jam/Observability/index|Observability]]

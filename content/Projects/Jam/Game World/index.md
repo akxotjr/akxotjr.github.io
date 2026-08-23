@@ -53,15 +53,15 @@ AOI가 packet 형식이나 baseline을 결정하지 않고, state synchronizatio
 
 ## Document Map
 
-1. [[01. World Entry and Transition|World Entry and Transition]] — world membership을 prepare, commit, rollback하는 과정
-2. [[02. Actor Lifecycle and Control|Actor Lifecycle and Control]] — stable actor identity와 ownership/control 분리
-3. [[03. Authoritative Simulation|Authoritative Simulation]] — server world tick의 인과 순서와 safe point
-4. [[04. Area of Interest Management|Area of Interest Management]] — spatial membership과 visible-set diff 계산
+1. [[Projects/Jam/Game World/01. World Entry and Transition|World Entry and Transition]] — world membership을 prepare, commit, rollback하는 과정
+2. [[Projects/Jam/Game World/02. Actor Lifecycle and Control|Actor Lifecycle and Control]] — stable actor identity와 ownership/control 분리
+3. [[Projects/Jam/Game World/03. Authoritative Simulation|Authoritative Simulation]] — server world tick의 인과 순서와 safe point
+4. [[Projects/Jam/Game World/04. Area of Interest Management|Area of Interest Management]] — spatial membership과 visible-set diff 계산
 
 ## Implementation References
 
-- `JamNet/src/runtime/world/lifecycle/ServerWorldTransitionCoordinator.cpp`
-- `JamNet/include/jamnet/runtime/world/lifecycle/WorldTransitionTypes.h`
-- `JamNet/src/runtime/world/simulation/server/ServerWorld.cpp`
-- `JamNet/include/jamnet/runtime/world/actor/ActorDirectory.h`
-- `JamNet/include/jamnet/runtime/world/actor/ActorId.h`
+- [World entry와 transition 조정](https://github.com/akxotjr/Jam/blob/master/JamNet/src/runtime/world/lifecycle/ServerWorldTransitionCoordinator.cpp)
+- [World transition 상태와 command 타입](https://github.com/akxotjr/Jam/blob/master/JamNet/include/jamnet/runtime/world/lifecycle/WorldTransitionTypes.h)
+- [Authoritative simulation 중심점](https://github.com/akxotjr/Jam/blob/master/JamNet/src/runtime/world/simulation/server/ServerWorld.cpp)
+- [Actor registry와 lifecycle API](https://github.com/akxotjr/Jam/blob/master/JamNet/include/jamnet/runtime/world/actor/ActorDirectory.h)
+- [Actor identity와 generation 모델](https://github.com/akxotjr/Jam/blob/master/JamNet/include/jamnet/runtime/world/actor/ActorId.h)
