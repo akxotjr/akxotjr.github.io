@@ -50,6 +50,8 @@ block-beta
 - [[Projects/M1/01. Server Content and World Lifecycle|Server Content and World Lifecycle]] — authentication, character session, world materialization, portal과 social route
 - [[Projects/M1/02. Unity Client Flow|Unity Client Flow]] — login부터 character select, world presentation, input·chat UI까지의 흐름
 - [[Projects/M1/03. Bot Scenarios and Validation|Bot Scenarios and Validation]] — headless scenario, profile, 실행 phase와 관측 결과
+- [[Projects/M1/04. Baseline Measurement|Baseline Measurement]] — 300 Bot 반복 측정, simulation latency와 replication/network 기준선
+- [[Projects/M1/05. Network Impairment Validation|Network Impairment Validation]] — UDP drop·lag·reordering 조건의 reliable recovery 검증
 
 ## Current Boundaries
 
