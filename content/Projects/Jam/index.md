@@ -108,7 +108,7 @@ Jam의 전체 구조를 처음 읽는 경우 다음 순서를 권장합니다. �
 3. [[Projects/Jam/Game World/index|Game World]] — world entry, actor lifecycle과 authoritative simulation
 4. [[Projects/Jam/State Synchronization/index|State Synchronization]] — lifecycle, snapshot, baseline과 prediction
 5. [[Projects/Jam/Physics/index|Physics]] — physics object model과 simulation scheduling
-6. [[Projects/Jam/Client Intergration/index|Client Integration]] — native client state와 Unity presentation boundary
+6. [[Projects/Jam/Client Integration/index|Client Integration]] — native client state와 Unity presentation boundary
 7. [[Projects/Jam/Data Pipeline/index|Data Pipeline]] — server와 client가 공유하는 content contract
 8. [[Projects/Jam/Observability/index|Observability]] — runtime metrics와 performance validation
 

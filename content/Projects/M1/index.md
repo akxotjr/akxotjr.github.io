@@ -21,14 +21,26 @@ M1은 Jam 런타임을 실제 MMORPG형 사용자 흐름으로 검증하는 샘�
 
 ## Project Layout
 
-```text
-M1_Shared
-    ├─ world contents / static instance data
-    └─ FlatBuffers protocol schema
-           ↓
-M1_Server ───── JamNet server runtime ───── JamUnity Assets/M1
-    │                                             │
-    └──────────── M1_Bot (headless clients) ──────┘
+```mermaid
+block-beta
+    columns 3
+
+    Shared["M1_Shared<br/>(Contents Data)"]:3
+
+    space:3
+
+    Unity["JamUnity<br/>(Client)"]
+    Bot["M1_Bot<br/>(Headless Client)"]
+    Server["M1_Server"]
+
+    Bridge["JamUnityBridge"]
+    space:2
+
+    Runtime["JamNet Runtime"]:3
+
+    Shared --> Unity
+    Shared --> Bot
+    Shared --> Server
 ```
 
 `M1_Shared/Data/World/world_contents.json`은 player spawn, portal route, Bot traverse lane과 hotspot을 한 곳에서 정의한다. Server와 Bot은 이 데이터를 읽고, Unity는 같은 shared-data manifest를 native runtime에 전달한다.
@@ -52,7 +64,7 @@ M1의 account와 character store는 process memory에 있다. 서버 시작 시 
 - [M1 server bootstrap](https://github.com/akxotjr/Jam/blob/master/SampleApp/M1_Server/main.cpp)
 - [Shared world contents](https://github.com/akxotjr/Jam/blob/master/SampleApp/M1_Shared/Data/World/world_contents.json)
 - [Bot runner](https://github.com/akxotjr/Jam/blob/master/SampleApp/M1_Bot/BotRunner.cpp)
-- [Unity client root](https://github.com/akxotjr/JamUnityClient/blob/master/Assets/M1/Runtime/Client/ClientRoot.cs)
+- [Unity client root](https://github.com/akxotjr/Jam/blob/master/JamUnity/Assets/M1/Runtime/Client/ClientRoot.cs)
 
 ### Related
 

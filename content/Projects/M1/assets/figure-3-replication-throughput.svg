@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="800" viewBox="0 0 1440 800">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.title{font-size:28px}.axis{font-size:22px}.tick{font-size:18px}.legend{font-size:18px}</style>
+<text class="title" x="720.0" y="42" text-anchor="middle">Replication actor-entry throughput</text>
+<line x1="120" y1="712.0" x2="1406" y2="712.0" stroke="#dddddd"/>
+<text class="tick" x="106" y="718.0" text-anchor="end">0</text>
+<line x1="120" y1="607.0" x2="1406" y2="607.0" stroke="#dddddd"/>
+<text class="tick" x="106" y="613.0" text-anchor="end">10,000</text>
+<line x1="120" y1="502.0" x2="1406" y2="502.0" stroke="#dddddd"/>
+<text class="tick" x="106" y="508.0" text-anchor="end">20,000</text>
+<line x1="120" y1="397.0" x2="1406" y2="397.0" stroke="#dddddd"/>
+<text class="tick" x="106" y="403.0" text-anchor="end">30,000</text>
+<line x1="120" y1="292.0" x2="1406" y2="292.0" stroke="#dddddd"/>
+<text class="tick" x="106" y="298.0" text-anchor="end">40,000</text>
+<line x1="120" y1="187.0" x2="1406" y2="187.0" stroke="#dddddd"/>
+<text class="tick" x="106" y="193.0" text-anchor="end">50,000</text>
+<line x1="120" y1="82.0" x2="1406" y2="82.0" stroke="#dddddd"/>
+<text class="tick" x="106" y="88.0" text-anchor="end">60,000</text>
+<line x1="120" y1="82" x2="120" y2="712" stroke="#111" stroke-width="2"/>
+<line x1="120" y1="712" x2="1406" y2="712" stroke="#111" stroke-width="2"/>
+<text class="axis" transform="translate(34 397.0) rotate(-90)" text-anchor="middle">Snapshot actor entries / s</text>
+<text class="axis" x="334.3" y="754" text-anchor="middle">Run 1</text>
+<rect x="292.3" y="122.5" width="84.0" height="589.5" fill="#287db2"/>
+<text class="axis" x="763.0" y="754" text-anchor="middle">Run 2</text>
+<rect x="721.0" y="119.1" width="84.0" height="592.9" fill="#287db2"/>
+<text class="axis" x="1191.7" y="754" text-anchor="middle">Run 3</text>
+<rect x="1149.7" y="121.7" width="84.0" height="590.3" fill="#287db2"/>
+<rect x="1157" y="66" width="245" height="54" rx="5" fill="white" stroke="#cccccc"/>
+<rect x="1171" y="76" width="28" height="18" fill="#287db2"/>
+<text class="legend" x="1211" y="92">Actor entries</text>
+</svg>
