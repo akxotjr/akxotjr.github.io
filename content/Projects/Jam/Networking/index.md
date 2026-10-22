@@ -32,13 +32,13 @@ Application payload
     -> RPC / system / domain handler
 ```
 
-IOCP worker는 transport completion을 진행하지만 sequence, ACK, RPC, session lifetime state를 직접 변경하지 않습니다. Endpoint 또는 bound `SessionId`로 owner shard를 찾은 뒤 그 shard에서 protocol pipeline을 실행합니다. 이 경계는 [[../Execution Model/index|Execution Model]]의 owner-local serial execution을 networking에 적용한 것입니다.
+서버의 인증·bind 전 session은 `AdmissionContext`가 소유하며 principal 검증 후 account affinity shard로 전달합니다. Established session의 sequence, ACK와 RPC state는 owner shard에서 처리하고, IOCP worker는 transport completion과 해당 경계로의 전달을 담당합니다. 이 구조는 [[Projects/Jam/Execution Model/index|Execution Model]]의 owner-local serial execution을 steady-state networking에 적용한 것입니다.
 
 ## Core Concepts
 
 ### Socket and Session Separation
 
-TCP connection이나 UDP endpoint는 transport 식별자입니다. 인증된 principal, authoritative `SessionId`, owner shard가 확정되어야 application traffic을 처리할 logical session이 됩니다. UDP는 endpoint 기반 pre-bind route에서 시작해 binding 뒤 `SessionId` route로 승격됩니다.
+TCP connection이나 UDP endpoint는 transport 식별자입니다. 인증된 principal, authoritative `SessionId`, owner shard가 확정되어야 application traffic을 처리할 logical session이 됩니다. 서버의 UDP는 endpoint admission route에서 시작해 principal 검증과 session 등록 후 bound `SessionId` route로 승격됩니다.
 
 ### Transport and Delivery Semantics
 
@@ -53,5 +53,5 @@ Framing, header validation, sequence 처리, transport ACK, fragmentation/reasse
 1. [[Projects/Jam/Networking/01. Connection and Session Lifecycle|Connection and Session Lifecycle]] — transport endpoint가 인증되고 shard-owned logical session이 되어 종료되기까지
 2. [[Projects/Jam/Networking/02. Transport and Delivery Semantics|Transport and Delivery Semantics]] — message 의미에서 필요한 recency·reliability·ordering contract를 선택하는 기준
 3. [[Projects/Jam/Networking/03. Packet Processing Pipeline|Packet Processing Pipeline]] — application payload와 wire 사이의 송수신 stage 및 execution boundary
-4. [[Projects/Jam/Networking/04. Reliable Datagram Delivery|Reliable Datagram Delivery]] — 선택된 reliable contract를 UDP 위에서 ACK, retransmission과 congestion control로 구현하는 방법
+4. [[Projects/Jam/Networking/04. Reliable Datagram Delivery|Reliable Datagram Delivery]] — ACK range와 cumulative ACK, pending tracking과 retransmission으로 reliable delivery를 구현하는 방법
 5. [[Projects/Jam/Networking/05. Packet Framing and Fragmentation|Packet Framing and Fragmentation]] — packet boundary, 가변 header, TCP assembly, UDP MTU와 reassembly

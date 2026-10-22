@@ -59,7 +59,7 @@ Shared Data / Generated Schema
 
 ### JamPx
 
-PhysX를 월드 시뮬레이션에 연결하는 물리 계층입니다. 물리 객체의 생성과 수명, 비동기 simulation step, 결과 반영을 shard 실행 모델과 조율합니다.
+PhysX를 월드 시뮬레이션에 연결하는 물리 계층입니다. 물리 객체의 생성과 수명, owner shard에서의 동기 simulation과 결과 반영을 관리합니다.
 
 ### JamUnityBridge
 
@@ -127,7 +127,7 @@ Jam의 기능은 별도의 예제에 머물지 않고 [[Projects/M1/index|M1]]�
 | Data Pipeline         | Implemented    | Validated  | schema 기반 C++/C# 생성과 runtime load 통합 경로 검증                                       |
 | Game World            | Implemented    | Validated  | transition, lifecycle, simulation과 AOI 주요 경로 검증 및 성능개선 진행. LOS는 experimental     |
 | State Synchronization | Implemented    | Validated  | lifecycle, full/delta state, baseline과 client replay 주요 경로 검증; tuning 및 성능 개선 진행 |
-| Physics               | Implemented    | Validated  | PhysX runtime, filtering과 async scheduling 주요 경로 검증; 성능 개선 진행                    |
+| Physics               | Implemented    | Validated  | PhysX runtime과 filtering 구현, 현재 owner shard의 동기 simulation 구조 기준으로 성능·회귀 검증 진행 |
 | Client Integration    | Implemented    | Validated  | native runtime, C ABI와 Unity presentation 통합 경로 검증                               |
 | Observability         | Implemented    | Validated  | metrics aggregation과 catalog 검증; 부하·장애 coverage 확장 중                             |
 

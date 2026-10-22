@@ -18,11 +18,18 @@ Jam의 State Synchronization은 **server world가 만든 authoritative state와 
 - server가 실제 적용한 input sequence를 `inputAck`로 전달해 client prediction history와 연결합니다.
 - local controlled actor는 prediction/reconciliation/replay를 사용하고 remote actor는 authoritative/proxy flow를 사용합니다.
 
-이 문서군에서 `snapshot`은 한 tick의 state update를 운반하는 전송 묶음을 뜻합니다. 그 안의 actor state 표현은 독립적으로 decode할 수 있으면 **full state**, 공유 baseline에 의존하면 **delta state**라고 부릅니다. Transport 수신 확인은 **transport ACK**, baseline 사용 가능 확인은 **baseline ACK**, server가 처리한 input sequence는 코드 필드명인 **`inputAck`**로 구분합니다.
+이 문서군에서 `snapshot`은 한 tick의 state update를 운반하는 전송 묶음을 뜻합니다. 그 안의 actor state 표현은 독립적으로 decode할 수 있으면 **full state**, 공유 baseline에 의존하면 **delta state**라고 부릅니다. Transport 수신 확인은 **transport ACK**, baseline 사용 가능 확인은 **baseline ACK**, server가 처리한 input sequence는 코드 필드명인 **`inputAck`** 로 구분합니다.
 
 ## End-to-End Flow
 
 ```mermaid
+---
+config:
+  flowchart:
+    defaultRenderer: elk
+---
+
+
 flowchart TD
 
     World["Authoritative World State"]
@@ -34,7 +41,7 @@ flowchart TD
     Lifecycle["Identity / Meta<br/>Reliable Lifecycle"]
     Snapshot["Continuous State<br/>Snapshot"]
 
-    Baseline["Full / Delta<br/>Per-User Baseline"]
+    Baseline["Full / Delta<br/>Shared Baseline + Per-User ACK"]
 
     Apply["Client Replication Apply"]
 
@@ -69,7 +76,7 @@ flowchart TD
 
 1. [[Projects/Jam/State Synchronization/01. Replication Model|Replication Model]] — AOI/world state에서 client sync 후보를 만드는 전체 구조
 2. [[Projects/Jam/State Synchronization/02. Lifecycle and Snapshot Delivery|Lifecycle and Snapshot Delivery]] — actor lifetime/meta와 continuous state 전송을 분리하는 이유
-3. [[Projects/Jam/State Synchronization/03. Baseline and Delta State|Baseline and Delta State]] — per-user baseline, baseline ACK, resync, initial sync
+3. [[Projects/Jam/State Synchronization/03. Baseline and Delta State|Baseline and Delta State]] — actor별 shared baseline, user별 baseline ACK, resync, initial sync
 4. [[Projects/Jam/State Synchronization/04. Prediction, Reconciliation and Replay|Prediction, Reconciliation and Replay]] — input history와 authoritative correction을 연결하는 과정
 
 ## Implementation References

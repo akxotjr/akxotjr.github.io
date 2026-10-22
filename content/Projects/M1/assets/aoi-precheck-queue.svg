@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 350" role="img" aria-label="Visibility queue work per second">
+<rect width="100%" height="100%" fill="#fff"/>
+<g font-family="Arial, sans-serif" fill="#243247">
+<text x="24" y="28" font-size="20" font-weight="bold">Visibility queue work per second</text>
+<text x="24" y="49" font-size="12">Million relations / second; three-run mean</text>
+<path d="M95,285.0 H870" stroke="#e2e8f0"/>
+<text x="85" y="289.0" text-anchor="end" font-size="12">0.00</text>
+<path d="M95,230.0 H870" stroke="#e2e8f0"/>
+<text x="85" y="234.0" text-anchor="end" font-size="12">0.35</text>
+<path d="M95,175.0 H870" stroke="#e2e8f0"/>
+<text x="85" y="179.0" text-anchor="end" font-size="12">0.69</text>
+<path d="M95,120.0 H870" stroke="#e2e8f0"/>
+<text x="85" y="124.0" text-anchor="end" font-size="12">1.04</text>
+<path d="M95,65.0 H870" stroke="#e2e8f0"/>
+<text x="85" y="69.0" text-anchor="end" font-size="12">1.39</text>
+<text x="288.75" y="308" text-anchor="middle" font-size="13">Enqueue attempts</text>
+<rect x="223.75" y="98.5593220338983" width="61" height="186.4406779661017" rx="3" fill="#64748b"/>
+<text x="254.25" y="92.5593220338983" text-anchor="middle" font-size="12">1.174</text>
+<rect x="288.75" y="227.80325414046283" width="61" height="57.19674585953717" rx="3" fill="#0891b2"/>
+<text x="319.25" y="221.80325414046283" text-anchor="middle" font-size="12">0.360</text>
+<text x="676.25" y="308" text-anchor="middle" font-size="13">Unique queued relations</text>
+<rect x="611.25" y="98.83057556161921" width="61" height="186.1694244383808" rx="3" fill="#64748b"/>
+<text x="641.75" y="92.83057556161921" text-anchor="middle" font-size="12">1.172</text>
+<rect x="676.25" y="227.99119354632575" width="61" height="57.008806453674254" rx="3" fill="#0891b2"/>
+<text x="706.75" y="221.99119354632575" text-anchor="middle" font-size="12">0.359</text>
+<rect x="95" y="327" width="12" height="12" fill="#64748b"/><text x="113" y="338" font-size="12">Before</text>
+<rect x="325" y="327" width="12" height="12" fill="#0891b2"/><text x="343" y="338" font-size="12">After</text>
+</g></svg>

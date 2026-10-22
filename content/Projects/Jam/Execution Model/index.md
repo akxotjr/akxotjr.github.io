@@ -14,7 +14,7 @@ Jam의 실행 모델은 **상태의 소유 위치를 먼저 정하고, 상태를
 
 Jam은 이 문제를 다음 원칙으로 단순화했습니다.
 
-> Mutable state has one execution owner. Work moves to the owner; the state does not move to the work.
+> 변경 가능한 상태는 하나의 execution owner가 소유합니다. 작업을 처리할 때는 상태를 옮기는 대신, 해당 owner의 실행 위치로 작업을 전달합니다.
 
 owner가 없는 작업은 global domain에서 병렬로 처리하고, owner가 있는 작업은 해당 owner가 배치된 shard로 전달해 직렬로 처리합니다. 서로 다른 shard는 동시에 실행되므로 상태별 ordering과 서버 전체의 concurrency를 함께 유지할 수 있습니다.
 
